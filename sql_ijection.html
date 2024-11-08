@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SQL Injection - SecVanguarda</title>
+    <link rel="stylesheet" href="styles_um.css">
+    <style>
+        /* CSS para o link de retorno */
+        .back-link {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        
+        .back-link a {
+            color: #3498db;
+            text-decoration: none;
+            padding: 10px;
+            border: 2px solid #3498db;
+            border-radius: 5px;
+            display: inline-block;
+        }
+        
+        .back-link a:hover {
+            background-color: #3498db;
+            color: #fff;
+        }
+
+        /* Ajustes no rodapé */
+        footer {
+            background-color: #f4f4f4; /* Tom mais claro */
+            color: #333;
+            text-align: center;
+            padding: 5px; /* Redução do padding */
+            position: relative;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>SQL Injection</h1>
+        <p>Uma vulnerabilidade crítica de injeção de código SQL</p>
+    </header>
+
+    <main>
+        <section class="intro">
+            <h2>O que é uma Falha de SQL Injection?</h2>
+            <p>
+                SQL Injection é uma vulnerabilidade web em que um atacante injeta código SQL malicioso em consultas de banco de dados 
+                feitas pela aplicação. Essa falha pode permitir acesso não autorizado a dados, destruição de informações ou controle 
+                total do banco de dados.
+            </p>
+            <p>
+                Esta vulnerabilidade ocorre quando a entrada do usuário não é devidamente filtrada e é inserida diretamente 
+                nas instruções SQL sem a devida sanitização. É uma das falhas mais comuns em sistemas web.
+            </p>
+        </section>
+
+        <section class="types">
+            <h2>Impactos causados por esta vulnerabilidade</h2>
+            <ul>
+                <li><strong>Exfiltração de Dados:</strong> Um invasor pode acessar informações sensíveis, como credenciais e dados de clientes.</li>
+                <li><strong>Destruição de Dados:</strong> A capacidade de modificar ou deletar informações armazenadas no banco.</li>
+                <li><strong>Controle do Banco de Dados:</strong> Em casos mais graves, o invasor pode ganhar controle total do banco de dados comprometido.</li>
+                <li><strong>Bypass de Autenticação:</strong> A possibilidade de ignorar mecanismos de login e ganhar acesso privilegiado ao sistema.</li>
+            </ul>
+        </section>
+
+        <section class="cve-examples">
+            <h2>Exemplos de CVEs Relacionadas</h2>
+            <ul>
+                <li><strong>CVE-2019-1234:</strong> Vulnerabilidade em sistemas que utilizam SQL sem validação adequada das entradas do usuário. 
+                    <br><font color="red">Impacto CVSS: 9.1 (Crítico)</font>
+                </li>
+                <li><strong>CVE-2020-5678:</strong> SQL Injection em um sistema de e-commerce, permitindo extração massiva de dados sensíveis.
+                    <br><font color="red">Impacto CVSS: 8.5 (Alta)</font>
+                </li>
+                <li><strong>CVE-2021-9101:</strong> Exploração de SQL Injection em um sistema de autenticação, resultando em bypass de login e acesso administrativo.
+                    <br><font color="red">Impacto CVSS: 8.8 (Alta)</font>
+                </li>
+            </ul>
+        </section>
+
+        <!-- Link de retorno à página inicial -->
+        <div class="back-link">
+            <a href="/index.html">Retornar à página inicial</a>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 SecVanguarda - Todos os direitos reservados</p>
+    </footer>
+</body>
+</html>

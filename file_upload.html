@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Upload - SecVanguarda</title>
+    <link rel="stylesheet" href="styles_um.css">
+    <style>
+        /* CSS adicional para garantir a visibilidade do link */
+        .back-link {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        
+        .back-link a {
+            color: #3498db; /* Cor azul para destaque */
+            text-decoration: none;
+            padding: 10px;
+            border: 2px solid #3498db;
+            border-radius: 5px;
+            display: inline-block;
+        }
+        
+        .back-link a:hover {
+            background-color: #3498db; /* Cor de fundo azul ao passar o mouse */
+            color: #fff;
+        }
+
+        /* Ajustes no rodapé */
+        footer {
+            background-color: #f4f4f4; /* Alteração do fundo para um tom mais claro */
+            color: #333;
+            text-align: center;
+            padding: 5px; /* Redução do padding */
+            position: relative; /* Remover o fixo para evitar sobreposição */
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>File Upload</h1>
+        <p>Uma vulnerabilidade crítica de injeção de arquivos maliciosos</p>
+    </header>
+
+    <main>
+        <section class="intro">
+            <h2>O que é uma Falha de File Upload?</h2>
+            <p>
+                Uma falha de File Upload é uma vulnerabilidade web em que um atacante consegue fazer
+                o upload de arquivos maliciosos para o lado do servidor, por isso o ataque é um ataque
+                server-side que ocorre do lado do servidor.
+            </p>
+            <p>
+                Esta vulnerabilidade surge geralmente em formulários que não fazem um filtro sanitário
+                impedindo que outros formatos de arquivos duvidosos sejam enviados e por este motivo
+                esta vulnerabilidade é explorada dentro de formulários vulneráveis.
+            </p>
+        </section>
+
+        <section class="types">
+            <h2>Impactos causados por esta vulnerabilidade</h2>
+            <ul>
+                <li><strong>RCE (Remote Code Execution):</strong> Execução remota de códigos, permitindo o atacante controlar o sistema comprometido.</li>
+                <li><strong>Deface:</strong> Ataques onde o modelo original da página é alterado, causando uma deformidade do conteúdo original.</li>
+                <li><strong>Roubo de informações:</strong> O atacante, através de uma backdoor, consegue se infiltrar no sistema para colher informações.</li>
+                <li><strong>Ataques de negação de serviço (DoS):</strong> O envio de arquivos em grandes quantidades pode sobrecarregar o sistema, tornando-o indisponível.</li>
+            </ul>
+        </section>
+
+        <section class="cve-examples">
+            <h2>Exemplos de CVEs Relacionadas</h2>
+            <ul>
+                <li><strong>CVE-2018-9206:</strong> A vulnerabilidade afetava o CMS Chamilo e-learning, onde o sistema não verificava o tipo de arquivo enviado, permitindo que um invasor carregue arquivos executáveis, resultando em uma execução remota de códigos.
+                    <br><font color="red">Impacto CVSS: 9.8 (Crítico)</font>
+                </li>
+                <li><strong>CVE-2020-3452:</strong> Envolvia o Cisco Adaptive Security Appliance (ASA) e Cisco Firepower Threat Defense (FTD). Essa falha permitia que um invasor enviasse arquivos não autorizados, levando à exposição de arquivos confidenciais no sistema comprometido.
+                    <br><font color="red">Impacto CVSS: 7.5 (Alta)</font>
+                </li>
+                <li><strong>CVE-2021-22204:</strong> A falha afetou o ExifTool, uma biblioteca usada para manipulação de metadados em imagens. Permitindo execução de código remoto (RCE) quando arquivos de imagem maliciosos eram enviados, explorando o file upload em softwares que utilizam essa biblioteca.
+                    <br><font color="red">Impacto CVSS: 7.8 (Alta)</font>
+                </li>
+            </ul>
+        </section>
+
+        <!-- Link de retorno à página inicial -->
+        <div class="back-link">
+            <a href="/index.html">Retornar à página inicial</a>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 SecVanguarda - Todos os direitos reservados</p>
+    </footer>
+</body>
+</html>

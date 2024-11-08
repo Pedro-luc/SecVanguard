@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SecVanguard - Vanguarda na Cyber Segurança</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="image.jpeg" alt="Logo" class="logo-img">
+            <h1>SecVanguard</h1>
+            <p>Vanguarda na Cyber Segurança</p>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="javascript:void(0);" onclick="showContent('nossa-historia')">Nossa História</a></li>
+            <li><a href="javascript:void(0);" onclick="showContent('vulnerabilidades')">Vulnerabilidades</a></li>
+            <li><a href="javascript:void(0);" onclick="showContent('pentest')">Pentest</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="nossa-historia" class="content-section">
+            <h2>Nossa História</h2>
+            <p>A SecVanguard é um site que descende do Instituto de Instrução Cibernética e Pesquisa de Vulnerabilidades - IICPV. Nosso objetivo é divulgar tudo sobre a segurança da informação, oferecendo recursos educativos sobre cibersegurança, como leis, vulnerabilidades e técnicas de pentest.</p>
+        </section>
+
+        <section id="vulnerabilidades" class="content-section">
+            <h2>Vulnerabilidades</h2>
+            <p>Falamos sobre as famosas zero-days, as principais vulnerabilidades em sistemas e aplicativos. Desde falhas em kernels até as vulnerabilidades mais críticas em aplicações web. As vulnerabilidades afetam tanto a segurança de dados quanto a estabilidade dos sistemas. Exemplo de CVEs incluem:</p>
+            <ul>
+                <li>CVE-2020-0601 (Windows CryptoAPI Spoofing)</li>
+                <li>CVE-2019-0708 (BlueKeep)</li>
+                <li>CVE-2021-3156 (Sudo)</li>
+                <br>
+                
+                <!-- Adicionando o nome do repositório nos links -->
+                <li><a href="SecVanguard/sql_ijection.html">SQL Injection</a><br></li>
+                <li><a href="SecVanguard/file_upload.html">File Upload</a></li>
+            </ul>
+        </section>
+
+        <section id="pentest" class="content-section">
+            <h2>Pentest</h2>
+            <p>O Pentest, ou teste de penetração, é um modelo de avaliação de segurança que simula ataques para encontrar falhas e vulnerabilidades. Existem diversas metodologias como o OWASP, PTES, e OSCP, além de técnicas como SQL Injection, Cross-Site Scripting (XSS), e Buffer Overflow.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 SecVanguard. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        function showContent(sectionId) {
+            const sections = document.querySelectorAll('.content-section');
+            sections.forEach(section => {
+                section.style.display = 'none';
+            });
+            document.getElementById(sectionId).style.display = 'block';
+        }
+
+        // Exibe a primeira aba por padrão
+        showContent('nossa-historia');
+    </script>
+</body>
+</html>
